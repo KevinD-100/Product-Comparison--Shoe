@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Which Shoe is Best for You</title>
+    <style>
+        /* Make the video fill the entire screen */
+        #background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures the video covers the whole screen */
+            z-index: -1; /* Make sure it's behind all other content */
+        }
+
+        /* Style for the page content */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            text-align: center;
+            color: #fff;
+            position: relative;
+            z-index: 1; /* Make sure text is above video */
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding-top: 60px; /* Offset content for video */
+        }
+        .shoe-block {
+            width: 18%;
+            background-color: rgba(255, 255, 255, 0.8); /* Add slight transparency */
+            margin: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            position: relative;
+            z-index: 1; /* Ensures content is above the background */
+            padding-bottom: 20px;
+        }
+        .shoe-block:hover {
+            transform: scale(1.05); /* Slightly increase size */
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a bigger shadow */
+            cursor: pointer; /* Change cursor to indicate interactivity */
+        }
+        .shoe-block img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        .shoe-details {
+            padding: 15px;
+        }
+        .shoe-details p {
+            margin: 5px 0;
+        }
+        .shoe-details .feature-name {
+            font-weight: bold;
+        }
+        .shoe-details .feature-value {
+            font-size: 1.1em;
+            color: #555;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Button Styles */
+        .view-details-btn {
+            background-color: #ff7b00;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .view-details-btn:hover {
+            background-color: #e65c00;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="shoe.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h1>Which Shoe is Best for You?</h1>
+
+    <div class="container">
+        <!-- Nike Block -->
+        <div class="shoe-block">
+            <img src="nike.png" alt="Nike">
+            <div class="shoe-details">
+                <p class="shoe-name">Nike</p>
+                <p class="feature-name">Rating:</p>
+                <p class="feature-value rating">⭐⭐⭐⭐</p>
+                <p class="feature-name">Type:</p>
+                <p class="feature-value">Running</p>
+                <p class="feature-name">Color:</p>
+                <p class="feature-value">Black</p>
+                <p class="feature-name">Price:</p>
+                <p class="feature-value"> ₹ 6695</p>
+            </div>
+            <!-- View Details Button -->
+            <a href="https://www.google.com/shopping/product/1?q=nike+shoes&prds=epd:6655309326728658867,eto:6655309326728658867_0,pid:6655309326728658867,rsk:PC_2912708453251207900&sa=X&ved=0ahUKEwjX363a7_qKAxUZSWwGHccaAgwQ9pwGCA0" class="view-details-btn" target="_blank">View Details</a>
+        </div>
+
+        <!-- Puma Block -->
+        <div class="shoe-block">
+            <img src="puma.jpg" alt="Puma">
+            <div class="shoe-details">
+                <p class="shoe-name">Puma</p>
+                <p class="feature-name">Rating:</p>
+                <p class="feature-value rating">⭐⭐⭐⭐⭐</p>
+                <p class="feature-name">Type:</p>
+                <p class="feature-value">Casual</p>
+                <p class="feature-name">Color:</p>
+                <p class="feature-value">Black</p>
+                <p class="feature-name">Price:</p>
+                <p class="feature-value"> ₹ 1899</p>
+            </div>
+            <!-- View Details Button -->
+            <a href="https://www.google.com/shopping/product/2375234693445907783?q=puma+shoes&prds=epd:17053149913493953438,oid:17053149913493953438,pid:418225710666937710,prmr:1,rsk:PC_15686767828381502489&sa=X&ved=0ahUKEwi1u6T47_qKAxV3SGwGHZUDNPEQ20sIMA" class="view-details-btn" target="_blank">View Details</a>
+        </div>
+
+        <!-- Adidas Block -->
+        <div class="shoe-block">
+            <img src="adidas.jpg" alt="Adidas">
+            <div class="shoe-details">
+                <p class="shoe-name">Adidas</p>
+                <p class="feature-name">Rating:</p>
+                <p class="feature-value rating">⭐⭐⭐⭐</p>
+                <p class="feature-name">Type:</p>
+                <p class="feature-value">Sports</p>
+                <p class="feature-name">Color:</p>
+                <p class="feature-value">Black</p>
+                <p class="feature-name">Price:</p>
+                <p class="feature-value"> ₹ 4619</p>
+            </div>
+            <!-- View Details Button -->
+            <a href="https://www.google.com/shopping/product/5859798374276680833?q=adidas+shoes&prds=eto:9809416192367439069_0;2226571105919268698_0,pid:9166930488674210923,rsk:PC_15306779403719255313&sa=X&ved=0ahUKEwjbpq-48PqKAxVvyjgGHf2vJYAQ9pwGCBQ" class="view-details-btn" target="_blank">View Details</a>
+        </div>
+
+        <!-- Skechers Block -->
+        <div class="shoe-block">
+            <img src="skech.jpg" alt="Skechers">
+            <div class="shoe-details">
+                <p class="shoe-name">Skechers</p>
+                <p class="feature-name">Rating:</p>
+                <p class="feature-value rating">⭐⭐⭐⭐</p>
+                <p class="feature-name">Type:</p>
+                <p class="feature-value">Walking</p>
+                <p class="feature-name">Color:</p>
+                <p class="feature-value">Black</p>
+                <p class="feature-name">Price:</p>
+                <p class="feature-value"> ₹ 2159</p>
+            </div>
+            <!-- View Details Button -->
+            <a href="https://www.google.com/shopping/product/9729316140217114239?q=skechers+shoes+for+men&prds=eto:10954399931944563446_0;13717934023296124257_0;11803569365100149266_0,pid:671274252253230797,rsk:PC_3036865758603534199&sa=X&ved=0ahUKEwj7mfPw8PqKAxWeumMGHRl9NawQ9pwGCCw" class="view-details-btn" target="_blank">View Details</a>
+        </div>
+
+        <!-- Timberland Block -->
+        <div class="shoe-block">
+            <img src="timb.jpg" alt="Timberland">
+            <div class="shoe-details">
+                <p class="shoe-name">Timberland</p>
+                <p class="feature-name">Rating:</p>
+                <p class="feature-value rating">⭐⭐⭐⭐⭐</p>
+                <p class="feature-name">Type:</p>
+                <p class="feature-value">Boots</p>
+                <p class="feature-name">Color:</p>
+                <p class="feature-value">Black</p>
+                <p class="feature-name">Price:</p>
+                <p class="feature-value"> ₹ 3550</p>
+            </div>
+            <!-- View Details Button -->
+            <a href="https://www.google.com/shopping/product/1?q=timberland+shoes&prds=epd:14529651507795777602,eto:14529651507795777602_0,pid:14529651507795777602&sa=X&ved=0ahUKEwjr1v6N8fqKAxVNT2wGHZ4xBzsQ9pwGCAU" class="view-details-btn" target="_blank">View Details</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; kd All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
